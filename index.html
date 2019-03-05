@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" class="width=device-width,initial-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div id="wrap">
+			<header id="header">
+				<div class="headerTop"></div>
+				<div class="tickets">
+					<h2>电影购票</h2>
+				</div>
+				<div class="button">
+					<div class="circle">
+						<img src="img/icon_location.png"/>
+					</div>
+					<span>|</span>
+					<div class="circleBig">
+						<img src="img/mine_gerenziliao.png"/>
+					</div>
+				</div>
+			</header>
+			<div id="border"></div>
+			<section id="content">
+				<div class="options">
+					<div class="city">
+						<span>广州</span>
+					</div>
+					<div class="drop">
+						<img src="img/Triangle.png"/>
+					</div>
+					<span class="title">星光大道测试影院</span>
+					<span class="button">
+						<img src="img/nav_filter.png"/>
+					</span>
+				</div>
+				<div class="banner"></div>
+				<nav class="navList">
+					<a href="javascript:;" class="showing active">正在热映</a>
+					<a href="javascript:;" class="coming">即将上映</a>
+					<span class="index"></span>
+				</nav>
+				<ul class="movieList">
+					<li>
+						<div class="liTop">
+							<img src="img/pic1.png" alt="" />
+							<div class="line">
+								<div class="liContent">
+									<h3>加勒比海盗5:死无对证加勒比海盗</h3>
+									<p>导演：乔阿吉姆</p>
+									<p>主演：约翰尼</p>
+									<p>120分钟/英语</p>
+									<div class="icons">
+										<span>首映</span>
+										<span>特惠</span>
+										<span>明星</span>
+										<span>点映</span>
+									</div>
+								</div>
+								<div class="imax">IMAX</div>
+								<div class="price">
+									¥10.<span>0起</span>
+								</div>
+								<div class="buy">购买</div>
+							</div>
+						</div>
+						<div class="liTime">
+							<div class="showTime">
+								<h4>今日排期</h4>
+								<div class="row1">
+									<span>10:00</span>
+									<span>12:06</span>
+									<span>13:25</span>
+									<span>14:00</span>
+								</div>
+								<div class="row2">
+									<span>15:08</span>
+									<span>16:40</span>
+									<span>17:52</span>
+									<span>18:10</span>
+								</div>
+							</div>
+							<a href="javascript:;" class=""></a>
+						</div>
+					</li>
+					<li>
+						<div class="liTop">
+							<img src="img/pic2.png" alt="" />
+							<div class="line">
+								<div class="liContent">
+									<h3>春娇救志明</h3>
+									<p>导演：乔阿吉姆</p>
+									<p>主演：约翰尼</p>
+									<p>120分钟/英语</p>
+									<div class="icons">
+										<span>首映</span>
+									</div>
+								</div>
+								<div class="imax">2D</div>
+								<div class="price">
+									¥38.<span>0起</span>
+								</div>
+								<div class="buy">购买</div>
+							</div>
+						</div>
+						<div class="liTime">
+							<div class="showTime">
+								<h4>今日排期</h4>
+								<div class="row1">
+									<span>10:00</span>
+									<span>12:06</span>
+									<span>13:25</span>
+									<span>14:00</span>
+								</div>
+							</div>
+							<a href="javascript:;" class=""></a>
+						</div>
+					</li>
+					<li>
+						<div class="liTop">
+							<img src="img/pic3.png" alt="" />
+							<div class="line">
+								<div class="liContent">
+									<h3>银河护卫队</h3>
+									<p>导演：乔阿吉姆</p>
+									<p>主演：约翰尼</p>
+									<p>120分钟/英语</p>
+									<div class="icons">
+										<span>首映</span>
+									</div>
+								</div>
+								<div class="imax">2D</div>
+								<div class="price">
+									¥38.<span>0起</span>
+								</div>
+								<div class="buy">购买</div>
+							</div>
+						</div>
+						<div class="liTime">
+							<div class="showTime">
+								<h4>今日排期</h4>
+								<div class="row1">
+									<span>10:00</span>
+									<span>12:06</span>
+									<span>13:25</span>
+									<span>14:00</span>
+								</div>
+							</div>
+							<a href="javascript:;" class=""></a>
+						</div>
+					</li>
+				</ul>
+				<div class="adress"></div>
+			</section>
+			<footer id="footer">
+				<div class="home active">
+					<span>购票</span>
+				</div>
+				<div class="store">
+					<span>商城</span>
+				</div>
+				<div class="activity">
+					<span>活动</span>
+				</div>
+				<div class="mine">
+					<span>我的</span>
+				</div>
+			</footer>
+		</div>
+	</body>
+	<script src="js/drag.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="js/transform.js" type="text/javascript" charset="UTF-8"></script>
+	<script type="text/javascript">
+		//禁止浏览器默认行为
+		document.addEventListener('touchstart',function(event){
+			event.preventDefault();
+		});
+		//点透事件处理
+		!(function(){
+			var aNodes = document.querySelectorAll('a');
+			for(var i=0;i<aNodes.length;i++){
+				aNodes[i].addEventListener('touchstart',function(){
+					window.location.href = this.href;
+				});
+			};
+		})();
+		//rem适配
+		(function(){
+			var width = document.documentElement.clientWidth;
+			var styleN = document.createElement('style');
+			styleN.innerHTML = 'html{font-size:'+width/23.44+'px !important;}';
+			document.head.appendChild(styleN);
+		})();
+	</script>
+</html>
